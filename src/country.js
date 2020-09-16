@@ -71,7 +71,7 @@ function Country({
   }
 
   return (
-    <CountryStyled onClick={handleClick}>
+    <CountryStyled>
       <img loading="lazy" src={flag} />
       <div className="details">
         <h2>{name}</h2>
