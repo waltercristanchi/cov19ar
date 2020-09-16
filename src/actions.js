@@ -13,7 +13,7 @@ function Actions() {
   return (
     <ActionsStyled>
       <Wrapper>
-        <div class="grid">
+        <div className="grid">
           <SearchBar />
         </div>
 

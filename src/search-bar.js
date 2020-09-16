@@ -10,6 +10,9 @@ align-items: center;
 margin-top: 1em;
 box-shadow: 0 2px 9px 0 rgba(0,0,0,.1);
 border-radius: 5px;
+@media screen and (min-width: 768px) {
+  width: 20%;
+}
 
 
 i{

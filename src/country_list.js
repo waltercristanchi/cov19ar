@@ -4,6 +4,9 @@ import Country from './country';
 import { useSelector, useDispatch } from 'react-redux';
 const CountryListStyled = styled.div`
 display: grid;
+grid-auto-flow: columns;
+grid-template-columns: repeat(auto-fill, minMax(0, 320px));
+grid-column-gap: 1em;
 justify-content: center;
 margin-top: 1em;
 grid-row-gap: 1em;
@@ -94,8 +97,6 @@ function CountryList() {
         })
 
       }
-      CountryList
-
     </CountryListStyled>
   )
 }

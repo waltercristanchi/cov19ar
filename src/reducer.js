@@ -17,7 +17,7 @@ export default function reducer(state, action) {
         return { ...state, countryListFilter, searchFilter }
       }
 
-      return { countryListFilter: [], searchFilter: 'None' }
+      return { ...state, countryListFilter: [], searchFilter: '' }
 
     }
 

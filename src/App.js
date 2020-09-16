@@ -7,6 +7,14 @@ import { createStore } from 'redux';
 import reducer from './reducer';
 import Actions from './actions'
 import Header from './Header'
+import Home from './home'
+
+import CountryDetails from './country-details'
+import {
+  BrowserRouter as Router,
+  Route, Switch
+} from 'react-router-dom'
+import { useFirebaseApp } from 'reactfire'
 
 
 const initialState = {
@@ -18,15 +26,28 @@ const initialState = {
 
 const store = createStore(reducer, initialState)
 function App() {
-  return (
-    <Provider store={store}>
 
-      <div className="App">
-        <Header />
-        <Actions />
-        <CountryList />
-      </div>
-    </Provider>
+  return (
+    <Router>
+      <Provider store={store}>
+
+        <div className="App">
+          <Header />
+          <Switch>
+            <Route path="/mundo/:id" component={CountryDetails} />
+
+
+            <Route path="/">
+              <Actions />
+              <CountryList />
+            </Route>
+
+          </Switch>
+
+        </div>
+      </Provider>
+    </Router>
+
   );
 }
 
